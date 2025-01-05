@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <meta charset="UTF-8">
+    <title>第6組網站</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- loading css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- loading javascript-->
+    {% load static %}
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <!-- us javascript -->
+        
+    <!--csrf token-->
+    {% csrf_token %}
+</head>
+
+<body  class="p-3 mb-2  text-center" >
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto  text-white flex-column">
+        <header class="masthead mb-auto">
+        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-dark  border-bottom shadow-sm">
+            <h5 class="my-0 mr-md-auto font-weight-normal ">Group6Project</h5>
+            <nav class="my-2 my-md-0 mr-md-3">
+                <a class="p-4 text-white" href="{% url 'home' %}">主頁</a>
+                <a class="p-4 text-white" href="{% url 'stocksearch' %}">股票歷時資訊查詢</a>
+                <a class="p-4 text-white" href="{% url 'stocknowsearch' %}">股票即時資訊查詢</a>
+            </nav>
+        </div>
+        </header>
+    </div>
+
+
+  <main role="main" class="inner cover">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+        <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+      </ol>
+      <div class="carousel-inner" >
+        <div class="carousel-item active">
+          <svg class="bd-placeholder-img" width="98%" height="300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect fill="#999" width="1000%" height="1000%"></rect></svg>
+          <div class="container" >
+            <div class="carousel-caption text-xl-center">
+              <h1>台股查詢系統<br><br></h1>
+              <h4>哈囉大家好，我們是國立宜蘭大學資訊工程學系的學生<br>這是我們程式語言的期末專題網站!<br><br></h4>
+              <h5>我們的組別為第6組，以下是我們的組別介紹</h5>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img" width="98%" height="300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect fill="#999" width="100%" height="100%"></rect></svg>
+          <div class="container">
+            <div class="carousel-caption">
+              <h2>網站分為3個部分：主頁、股票歷史資訊查詢、股票即時資訊查詢。<br><br></h2>
+              <p>1. 主頁為網站的基本介紹以及我們的組員介紹</p>
+              <p>2. 股票歷史資訊查詢為使用者通過輸入日期（年或者月）從而得到相對應的資訊</p>
+              <p>3. 股票即時資訊查詢為使用者輸入股票代碼去查詢股票的即時資訊</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <svg class="bd-placeholder-img" width="98%" height="300" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect fill="#999" width="100%" height="100%"></rect></svg>
+          <div class="container">
+            <div class="carousel-caption text" >
+              <h3>股票歷時資訊查詢</h3>
+              <p><a class="btn btn-primary btn-lg" href="{% url 'stocksearch' %}" role="button">開始使用 »</a></p>
+              <h3>股票即時資訊查詢</h3>
+              <p><a class="btn btn-lg btn-primary" href="{% url 'stocknowsearch' %}" role="button">開始使用 »</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <br><br>
+    <div class="container marketing">
+
+      <div class="row text-center">
+        <div class="col-lg-4">
+          <h2 class="text-white"></h2>
+          <p class="text-white"></p>
+      </div><!-- /.col-lg-4 -->
+        <div class="  col-lg-4">
+          <h2>指導老師</h2>
+          <img src="../static/imgs/szuyin.jpg" class="text-center bd-placeholder-img rounded-circle" height="200" width="200"></img>
+          <h3>林斯寅 老師</h3>
+          <p class="text-left">
+            電子郵件: szuyin@niu.edu.tw<br>
+            課程:     110年下學年資工系二年級程式語言<br></p>
+          <p><a class="btn btn-secondary text-center" href="https://csie.niu.edu.tw/index.php?Plugin=o_niu&Action=o_niutchdetail&niuid=szuyin" role="button">更多資訊 »</a></p>
+        </div>
+        <div class="col-lg-4">
+          <h2></h2>
+          <p></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+      <!-- 組員介紹 -->
+      <hr>
+      <h2>組員介紹</h2>
+      <div class="row text-center">
+        <div class="  col-lg-4">
+          <img src="../static/imgs/ray.jpg"  class="text-center bd-placeholder-img rounded-circle" height="200" width="200"></img>
+          <h4>簡品睿（組長）</h4>
+          <p class="text-left">
+            學號: B0643010<br>
+            班級：資工五<br></p>
+        </div>
+        <div class="  col-lg-4">
+          <img src="../static/imgs/yujie.jpg"  class="text-center bd-placeholder-img rounded-circle" height="200" width="200"></img>
+          <h4>王昱捷</h4>
+          <p class="text-left">
+            學號: B0943022<br>
+            班級：資工二 <br></p>
+        </div>
+        <div class="  col-lg-4">
+          <img src="../static/imgs/wei.jpg"  class="text-center bd-placeholder-img rounded-circle" height="200" width="200"></img>
+          <h4>李威頡</h4>
+          <p class="text-left">
+            學號: B0943024<br>
+            班級：資工二 <br></p>
+        </div>
+        <div class="  col-lg-4">
+          <img src="../static/imgs/youyi.jpg"  class="text-center bd-placeholder-img rounded-circle" height="200" width="200"></img>
+          <h4>郭又萓</h4>
+          <p class="text-left">
+            學號: B0943033<br>
+            班級：資工二 <br></p>
+        </div>
+        <div class="  col-lg-4">
+          <img src="../static/imgs/gemn.jpg"  class="text-center bd-placeholder-img rounded-circle" height="200" width="200"></img>
+          <h4>張光猛</h4>
+          <p class="text-left">
+            學號: B0943048<br>
+            班級：資工二 <br></p>
+        </div>
+        <div class="  col-lg-4">
+          <img src="../static/imgs/hong.jpg"  class="text-center bd-placeholder-img rounded-circle" height="200" width="200"></img>
+          <h4>陳建宏</h4>
+          <p class="text-left">
+            學號: B0943206<br>
+            班級：資工三 <br></p>
+        </div>
+      </div>
+  
+      <!-- START THE FEATURETTES -->
+  
+      <hr class="featurette-divider">
+  
+  </main>
+    <!-- <hr class="featurette-divider"> -->
+    <footer class ="  container">
+      <p class="float-lg-right"><a href="#">Back to top</a></p>
+      <p class="float-lg-left">© 110年下學期宜大程式語言第6組</p>
+  </footer>
+
+</body>
+   
+</html>
