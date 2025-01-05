@@ -1,5 +1,4 @@
 # Stock-Web-Crawling-Website
-# Taiwan Stock Market Query Website
 
 A stock market query website developed using Django framework, providing historical data and real-time stock quotes for Taiwan Stock Exchange.
 
